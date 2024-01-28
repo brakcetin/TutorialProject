@@ -4,8 +4,41 @@ BoxLayoutExample:
     orientation: "vertical"
     Button:
         text: "button1"
+        # size: "40dp", "40dp"  DOES NOT WORKING
+
+        # size_hint: .8, .5 => %80 of x, %50 of y
+        # size_hint: 1, .5
+
+        #for manual mode such as widget
+        # size: "100dp", "60dp"   #if do not use size:..., default one is size: "100dp", "100dp"
+        # size_hint: None, None
+        # width: "100dp"  # fixed width
+        # height: "60dp"  # fixed height
+
+
+        # for fixed height
+        size_hint: .5, None # %50 width, fixed height
+        height: "60dp"
+
+        # You can write just one of them
+        # x, center_x, right      => for left, middle, right
+        # y, center_y, top        => for bottom, middle, top
+        # pos_hint: {"x": 0}        => left
+        # pos_hint: {"x": .5}       => right due to left of the box is on the middle of width(%50 percent)
+        # pos_hint: {"x": 1}        => out of the page
+        # pos_hint: {"right": 1}    => right. because right of the box is on the right of width
+        # pos_hint: {"right": .5}   => left. because right of the box is on the middle of width
+        pos_hint: {"center_x": .5}  #  => middle. Because center of the box is on the middle of width
+
+        #orientation: horizontal
+        # size_hint: .5, .5
+        # pos_hint: {"center_y": .5}
+
+
     Button:
         text: "button2"
+        size_hint: 1, 2
+
     Label:
         text: "label1"
 
