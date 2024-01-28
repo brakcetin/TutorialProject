@@ -1,7 +1,8 @@
 BoxLayoutExample:
 
 <BoxLayoutExample>
-    orientation: "vertical"
+    # orientation: "vertical"
+    orientation: "horizontal"
     Button:
         text: "button1"
         # size: "40dp", "40dp"  DOES NOT WORKING
@@ -17,8 +18,8 @@ BoxLayoutExample:
 
 
         # for fixed height
-        size_hint: .5, None # %50 width, fixed height
-        height: "60dp"
+        # size_hint: .5, None # %50 width, fixed height
+        # height: "60dp"
 
         # You can write just one of them
         # x, center_x, right      => for left, middle, right
@@ -28,16 +29,24 @@ BoxLayoutExample:
         # pos_hint: {"x": 1}        => out of the page
         # pos_hint: {"right": 1}    => right. because right of the box is on the right of width
         # pos_hint: {"right": .5}   => left. because right of the box is on the middle of width
-        pos_hint: {"center_x": .5}  #  => middle. Because center of the box is on the middle of width
-
-        #orientation: horizontal
-        # size_hint: .5, .5
-        # pos_hint: {"center_y": .5}
+        # pos_hint: {"center_x": .5}  #  => middle. Because center of the box is on the middle of width
 
 
-    Button:
-        text: "button2"
-        size_hint: 1, 2
+        size_hint: .5, .5
+        pos_hint: {"center_y": .5}
+
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "10dp" # puts space between the boxes
+        Button:
+            text: "button2.1"
+            # size_hint: 1, 2
+        Button:
+            text: "button2.2"
+        Button:
+            text: "button2.3"
+        Button:
+            text: "button2.4"
 
     Label:
         text: "label1"
